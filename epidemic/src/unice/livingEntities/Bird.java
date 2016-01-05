@@ -1,14 +1,9 @@
 package unice.livingEntities;
 
-import unice.map.Location;
 import unice.map.Map;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
-
 /**
- * @author Loïc
+ * @author Loïc,Thomas
  */
 public abstract class Bird extends Animal{
 

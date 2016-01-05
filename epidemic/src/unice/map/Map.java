@@ -9,6 +9,7 @@ import java.util.Random;
 
 /**
  * @author Loïc
+ * @author Michael Kölling and David J. Barnes
  * Represents a map where Living Entities of various species will live and cohabit.
  */
 public class Map {

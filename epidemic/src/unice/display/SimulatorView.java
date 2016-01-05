@@ -43,4 +43,5 @@ public interface SimulatorView {
      * Prepare for a new run.
      */
     void reset();
+
 }

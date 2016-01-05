@@ -1,18 +1,17 @@
 package unice.simulator;
 
-import unice.*;
-import unice.display.*;
-import unice.livingEntities.LivingEntity;
+import unice.display.GraphView;
+import unice.display.GridView;
+import unice.display.SimulatorView;
+import unice.livingEntities.*;
 import unice.map.Location;
 import unice.map.Map;
-import unice.livingEntities.*;
 import unice.map.NeighbourhoodType;
 import unice.virus.H1N1Virus;
 import unice.virus.H5N1Virus;
 
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
@@ -21,6 +20,7 @@ import java.util.Random;
  * humans, chickens, ducks and pigs.
  * 
  * @author David J. Barnes and Michael Kölling
+ * @author Thomas GIllot, Loic Rose, Romain Chaudron
  * @version 2011.07.31
  */
 public class Simulator {
@@ -37,7 +37,7 @@ public class Simulator {
     private static final double PIG_CREATION_PROBABILITY = 0.15;
     // The probability that a person will be created in any given map position.
     // If we want to have no empty space, we must put 1
-    private static final double PERSON_CREATION_PROBABILITY = 0.6;
+    private static final double PERSON_CREATION_PROBABILITY = 0.2;
 
     private static final double PIG_INITIALINFECTION_PROBABILITY = 0.5;
     private static final double DUCK_INITIALINFECTION_PROBABILITY = 0.5;
@@ -52,6 +52,7 @@ public class Simulator {
     // The graphical views of the simulation.
     private List<SimulatorView> views;
 
+    private GridView gV;
     /**
      * Construct a simulation field with default size.
      */
@@ -96,14 +97,17 @@ public class Simulator {
 
         // Setup a valid starting point.
         reset();
+
+        gV  = (GridView)views.get(0);
     }
 
     /**
      * Run the simulation from its current state for a reasonably long period,
      * (4000 steps).
      */
-    public void runLongSimulation() {
-        simulate(4000);
+    public void runLongSimulation() throws InterruptedException{
+        //simulate(4000);
+        simulate(1000);
     }
 
     /**
@@ -113,8 +117,9 @@ public class Simulator {
      * @param numSteps
      *            The number of steps to run for.
      */
-    public void simulate(int numSteps) {
+    public void simulate(int numSteps) throws InterruptedException{
         for (int step = 1; step <= numSteps && views.get(0).isViable(map); step++) {
+            speed();
             simulateOneStep();
         }
     }
@@ -191,5 +196,12 @@ public class Simulator {
     private void placeLivingEntity(LivingEntity theLivingEntity, int x, int y){
         livingEntities.add(theLivingEntity);
         theLivingEntity.setLocation(new Location(x,y));
+    }
+
+    private void speed() throws InterruptedException{
+        String speed = gV.getSpeed();
+        if(speed.equals("SLOW")) Thread.sleep(1000);
+        else if(speed.equals("MEDIUM")) Thread.sleep(500);
+        else Thread.sleep(100);
     }
 }

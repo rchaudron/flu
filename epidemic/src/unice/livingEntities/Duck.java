@@ -1,12 +1,9 @@
 package unice.livingEntities;
 
-import unice.map.Location;
 import unice.map.Map;
 
-import java.util.List;
-
 /**
- * @author Loïc
+ * @author Loïc,Thomas
  */
 public class Duck extends Bird{
 

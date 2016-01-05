@@ -11,6 +11,7 @@ import java.util.HashMap;
  * object that is found within the field.
  * 
  * @author David J. Barnes and Michael Kölling
+ * @author Loic Rose
  * @version 2011.07.31
  */
 public class FieldStats {

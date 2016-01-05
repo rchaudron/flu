@@ -5,7 +5,7 @@ import unice.livingEntities.LivingEntity;
 import java.util.ArrayList;
 
 /**
- * @author Loïc
+ * @author Romain CHuadron , Thomas GILLOT, Loic Rose
  * Represents a Virus
  */
 public class Virus {

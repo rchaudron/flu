@@ -3,7 +3,7 @@ package unice.livingEntities;
 import unice.map.Map;
 
 /**
- * @author Loïc
+ * @author Loïc,Thomas
  */
 public class Chicken extends Bird{
 

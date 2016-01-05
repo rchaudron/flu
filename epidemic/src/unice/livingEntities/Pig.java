@@ -2,10 +2,8 @@ package unice.livingEntities;
 
 import unice.map.Map;
 
-import java.util.*;
-
 /**
- * @author Loïc
+ * @author Loïc,Thomas
  */
 public class Pig extends Animal{
 

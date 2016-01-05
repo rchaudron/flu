@@ -4,7 +4,7 @@ import unice.livingEntities.Human;
 import unice.livingEntities.Pig;
 
 /**
- * @author Loïc
+ * @author Romain Chuadron
  * Class representing the H1N1 Virus
  */
 public class H1N1Virus extends Virus {

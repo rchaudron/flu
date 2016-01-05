@@ -1,7 +1,7 @@
 package unice.livingEntities;
 
 /**
- * @author Loïc
+ * @author Romain
  */
 public enum HealthStatusType {
     HEALTHY,

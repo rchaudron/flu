@@ -1,15 +1,14 @@
 package unice.livingEntities;
 
-import unice.map.Map;
 import unice.map.Location;
+import unice.map.Map;
 import unice.virus.Virus;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
 /**
- * @author Loïc
+ * @author Loïc, Thomas
  */
 public abstract class LivingEntity {
 
@@ -45,7 +44,7 @@ public abstract class LivingEntity {
     protected void setHealthStatus(HealthStatusType theHealthStatus) {
         // If no change, do nothing...
         if (theHealthStatus==healthStatus) return;
-        System.out.println(this.getClass().getSimpleName()+ "=> " + theHealthStatus.toString());
+        //System.out.println(this.getClass().getSimpleName()+ "=> " + theHealthStatus.toString());
 
         // Set the new Status...
         healthStatus = theHealthStatus;

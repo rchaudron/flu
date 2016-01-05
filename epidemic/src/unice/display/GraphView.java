@@ -1,10 +1,14 @@
 package unice.display;
 
+import unice.map.Map;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.*;
-import unice.map.Map;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * The GraphView provides a view of the populations of actors in the field as a
@@ -13,6 +17,7 @@ import unice.map.Map;
  * not currently be displayed.
  * 
  * @author Michael Kölling and David J. Barnes
+ * @author Loic Rose
  * @version 2011.07.31
  */
 public class GraphView implements SimulatorView {

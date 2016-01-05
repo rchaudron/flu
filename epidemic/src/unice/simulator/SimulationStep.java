@@ -3,7 +3,7 @@ package unice.simulator;
 import java.util.TimerTask;
 
 /**
- * @author Loïc
+ * @author Romain
  */
 public class SimulationStep extends TimerTask {
 
