@@ -30,6 +30,9 @@ public class Begining extends JFrame {
     private JLabel label2 = new JLabel("Neighbourhood type:");
 
     public Begining() {
+        /**
+         * Setup the frame
+         */
         simuation_begin = false;
 
         setTitle("Welcome to the Epidemic Simulator !");
@@ -99,6 +102,10 @@ public class Begining extends JFrame {
         }
     }
 
+    /**
+     * This class doesn't allow to write any character no numeric
+     * Only allow character in [0-9]
+     */
     private class ClavierListener implements KeyListener{
         /**
          * Source : openClassRoom : Controle du clavier : l'interface KeyListener
